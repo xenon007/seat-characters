@@ -3,7 +3,7 @@
 use Seat\Web\Models\User;
 
 // Добавляем новый пункт меню Characters
-Route::get('/characters', function () {
+Route::get('/character-list', function () {
     $users = User::all();
     return view('characters', compact('users'));
 })->name('characters.list');
